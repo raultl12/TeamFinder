@@ -9,3 +9,5 @@ Los jugadores de eSports tienen dificultades a la hora de encontrar equipos para
 [Historias de Usuarios](./docs/historiasUsuario.md)
 
 [Milestones](./docs/milestones.md)
+
+[Personas](./docs/user_journey.md)
