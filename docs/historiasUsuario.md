@@ -1,7 +1,7 @@
 # Historias de usuario
 
-## [HU001] Búsqueda de jugadores
+## [HU001] Búsqueda de entrenamientos
 
 **Mario Torrente Guisado**
 
-Mario desea encontrar equipos completos de 5 personas, en los que todos los integrantes tengan el mismo nivel de habilidad basado en el rango establecido por el videojuego (los rangos varían dependiendo del juego). El rango del equipo sera el mismo que el de la persona que crea el equipo. El equipo debe emparejarse con otro equipo del mismo rango para que la partida sea equilibrada. Además, al equipo creado solo podrán entrar jugadores cuyo rango sea el mimso que el asignado al equipo. Esto permite que las partidas se jueguen en igualdad de condiciones y el equipo ganador pueda subir de rango.
+Mario es un awper agresivo de rango plata que desea mejorar su impacto en las partidas con entrenamientos especificos para él, ya que suele ser sorprendido por varios enemigos que acaban rapidamente con él por su mal posicionamiento, disminuyendo su ratio KD por debajo de 1.
