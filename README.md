@@ -10,4 +10,4 @@ Los jugadores de counter-strike no encuentran ejercicios personalizados para mej
 
 [Milestones](./docs/milestones.md)
 
-[Personas](./docs/user_journey.md)
+[Personas](./docs/user-journey.md)
