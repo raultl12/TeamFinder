@@ -22,3 +22,9 @@ Dentro del juego los jugadores se distinguen por su rango, que son:
 * Elite global
 
 Cuanto más rango tenga un jugador, mas hábil es.
+
+
+En cuanto a los entrenamientos, estarán almacenados en el sisema, y se caracterizan por el rol, rango, el tipo de jugador al que van dirigidos y habilidad que trabajan.
+
+
+Para que Mario encuentre un entrenamiento personalizado, tiene que indicar su rol, si es un jugador agresivo o controlador, que tipo de habilidad quiere mejorar, en su caso el posicionamiento y que rango tiene. A partir de esto la aplicacion muestra entrenamientos personalizados para él.
