@@ -7,13 +7,18 @@ export enum Rol {
     Lurker = "Lurker",
     Awper = "Awper",
   }
+
+export enum Actitud {
+    Agresivo = "Agresivo",
+    Controlador = "Controlador",
+  }
 export class Usuario {
     public rol: Rol;
-    public actitud: ;
+    public actitud: Actitud;
     public ratio: ;
     public rango: ;
   
-    constructor(rol: Rol, actitud: , ratio: , rango: ) {
+    constructor(rol: Rol, actitud: Actitud, ratio: , rango: ) {
       this.rol = rol;
       this.actitud = actitud;
       this.ratio = ratio;
