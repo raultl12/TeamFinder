@@ -15,7 +15,7 @@ export enum Actitud {
 export class Usuario {
     public rol: Rol;
     public actitud: Actitud;
-    public ratio: ;
+    public ratio: number;
     public rango: ;
   
     constructor(rol: Rol, actitud: Actitud, ratio: , rango: ) {
