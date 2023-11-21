@@ -17,9 +17,4 @@ export enum Nivel {
 export class Habilidad {
     public tipo: TipoHabilidad;
     public nivel: Nivel;
-  
-    constructor(tipo: TipoHabilidad, nivel: Nivel) {
-      this.tipo = tipo;
-      this.nivel = nivel;
-    }
   }

@@ -26,11 +26,4 @@ export class Usuario {
     public actitud: Actitud;
     public ratio: number;
     public rango: Rango;
-  
-    constructor(rol: Rol, actitud: Actitud, ratio: number, rango: Rango) {
-      this.rol = rol;
-      this.actitud = actitud;
-      this.ratio = ratio;
-      this.rango = rango;
-    }
   }
