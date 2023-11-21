@@ -1,18 +1,18 @@
 // Clase Habilidad
 
 export enum TipoHabilidad {
-    Posicionamiento = "Posicionamiento",
-    Rotaciones = "Rotaciones",
-    Apoyo = "Apoyo",
+    Posicionamiento,
+    Rotaciones,
+    Apoyo,
   }
 
 export enum Nivel {
-    Muy_malo = "Muy malo",
-    Malo = "Malo",
-    Medio = "Medio",
-    Bueno = "Bueno",
-    Muy_bueno = "Muy bueno",
-    Excelente = "Excelente",
+    Muy_malo,
+    Malo,
+    Medio,
+    Bueno,
+    Muy_bueno,
+    Excelente,
 }
 export class Habilidad {
     public tipo: TipoHabilidad;

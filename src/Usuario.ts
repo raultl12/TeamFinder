@@ -1,24 +1,24 @@
 // Clase Usuario
 
 export enum Rol {
-    Fragger = "Fragger",
-    IGL = "IGL",
-    Support = "Support",
-    Lurker = "Lurker",
-    Awper = "Awper",
+    Fragger,
+    IGL,
+    Support,
+    Lurker,
+    Awper,
   }
 
 export enum Actitud {
-    Agresivo = "Agresivo",
-    Controlador = "Controlador",
+    Agresivo,
+    Controlador,
   }
 
 export enum Rango {
-    Plata = "Plata",
-    Oro = "Oro",
-    Ak = "Ak",
-    Maestro = "Maestro",
-    EliteGlobal = "Elite Global",
+    Plata,
+    Oro,
+    Ak,
+    Maestro,
+    EliteGlobal,
   }
   
 export class Usuario {
