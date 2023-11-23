@@ -19,3 +19,13 @@ Para ver la discusión de selección de cada herramienta puede ver los siguiente
 * [Runtime](./docs/eleccion_runtime.md)
 * [Gestor de dependencias](./docs/eleccion_gestor_dependencias.md)
 * [Task runner](./docs/eleccion_task_runner.md)
+
+## Clase Usuario
+Esta clase es la clase principal donde se implementará la lógica de negocio.
+
+## Comprobación de sintaxis
+Para comprobar la sintaxis de nuestro proyecto se ha establecido una tarea en el [archivo de configuración de velociraptor](./velociraptor.ts) que se encarga de comprobar la sintaxis del archivo Usuario.ts. Para ello se debe ejecutar la siguiente orden
+
+```bash
+vr run check
+```
