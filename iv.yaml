@@ -1,0 +1,6 @@
+lenguaje: TypeScript
+entidad: src/Usuario.ts
+
+automatizar:
+  fichero: velociraptor.ts
+  orden: vr run
