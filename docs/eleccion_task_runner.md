@@ -6,7 +6,7 @@
 Es el más usado con Node.js. Las tareas se escriben en la seccion scripts dentro del package.json. 
 
 ### Gulp
-Es en task runner independiente en el que las tareas se escriben en un fichero .js. Se pueden incluir plugins externos. 
+Es en task runner independiente en el que las tareas se escriben en un fichero .js. Se pueden incluir plugins externos. Utiliza node, por lo que hay que instalarlo. En Snyk Advisor no tiene una puntuación muy elevada(79/100).
 
 ### Grunt
 Grunt es muy similar a gulp y esta basado en Node.js. Las tareas también se escriben en un fichero .js. 
