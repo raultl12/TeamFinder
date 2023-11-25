@@ -1,5 +1,5 @@
 lenguaje: TypeScript
-entidad: src/Usuario.ts
+entidad: src/usuario.ts
 
 automatizar:
   fichero: velociraptor.ts
