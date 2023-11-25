@@ -1,2 +1,2 @@
 lenguaje: TypeScript
-entidad: src/Usuario.ts
+entidad: lib/usuario.ts
