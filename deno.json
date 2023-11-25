@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "install_vr": "deno install --unstable --root $HOME/.deno/bin -A -f --name=vr https://deno.land/x/velociraptor@1.5.0/cli.ts"
+
+  }
+}
