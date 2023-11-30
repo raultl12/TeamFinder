@@ -18,3 +18,18 @@ export enum Rango {
     Maestro,
     EliteGlobal,
 }
+
+export enum TipoHabilidad{
+    Posicionamiento,
+    Rotaciones,
+    Apoyo,
+}
+
+export enum Nivel{
+    Muy_malo,
+    Malo,
+    Medio,
+    Bueno,
+    Muy_bueno,
+    Excelente
+}
