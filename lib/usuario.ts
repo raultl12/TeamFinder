@@ -1,5 +1,3 @@
-// Clase Usuario
-
 export enum Rol {
     Fragger,
     IGL,

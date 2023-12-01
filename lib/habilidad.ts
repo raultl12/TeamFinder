@@ -1,5 +1,3 @@
-// Clase Habilidad
-
 export enum TipoHabilidad {
     Posicionamiento,
     Rotaciones,
