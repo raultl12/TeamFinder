@@ -1,4 +1,4 @@
-import {Rol, Actitud, Rango, TipoHabilidad, Nivel} from './types'
+import {Rol, Actitud, Rango, TipoHabilidad, Nivel} from './types.ts'
 
 export class Entrenamiento{
     private rol: Rol;
@@ -6,6 +6,14 @@ export class Entrenamiento{
     private rango: Rango;
     private tipoHabilidad: TipoHabilidad;
     private nivel: Nivel;
+
+    constructor(rol: Rol, actitud: Actitud, rango: Rango, tipoHabilidad: TipoHabilidad, nivel: Nivel){
+        this.rol = rol;
+        this.actitud = actitud;
+        this.rango = rango;
+        this.tipoHabilidad = tipoHabilidad;
+        this.nivel = nivel;
+    }
 
     //Getters de los campos
     public getRol(): Rol{
