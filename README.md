@@ -22,7 +22,7 @@ Para ver la discusión de selección de cada herramienta puede ver los siguiente
 * [Gestor de dependencias](./docs/eleccion_gestor_dependencias.md)
 * [Task runner](./docs/eleccion_task_runner.md)
 
-## Clase Usuario
+## Clase Asignador
 Esta clase es la clase principal donde se implementará la lógica de negocio.
 
 ## Comprobación de sintaxis
