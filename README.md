@@ -12,6 +12,8 @@ Los jugadores de counter-strike no encuentran ejercicios personalizados para mej
 
 [Personas](./docs/user-journey.md)
 
+[Test](./docs/test.md)
+
 ## Herramientas para la automatización de operaciones
 Las herramientas seleccionadas para este proyecto se indican en [este archivo](./docs/herramientas_seleccionadas.md). 
 
@@ -28,4 +30,13 @@ Para comprobar la sintaxis de nuestro proyecto se ha establecido una tarea en el
 
 ```bash
 vr run check
+```
+
+## Tests
+Puede encontrar la elección de herramientas para testing [aquí](./docs/test.md)
+
+Para ejecutar los test:
+
+```bash
+vr run test
 ```
