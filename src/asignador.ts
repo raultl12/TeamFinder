@@ -1,6 +1,6 @@
 import {Usuario} from './usuario.ts'
 import { Entrenamiento } from './entrenamiento.ts'
-import { Nivel, TipoHabilidad } from './types.ts';
+import { Actitud, Nivel, Rango, Rol, TipoHabilidad } from './types.ts';
 
 export class Asignador{
     private usuario: Usuario | null;
@@ -25,19 +25,7 @@ export class Asignador{
         this.entrenamientos.push(entrenamiento);
     }
 
-    asignarEntrenamiento(): Entrenamiento{
-        if(this.entrenamientos.length == 0){
-            throw new Error("No hay entrenamientos");
-        }
-
-        if(this.usuario == null){
-            throw new Error("No hay usuario");
-        }
-
-        const [rol, actitud, rango, ratio] = [this.usuario?.getRol(), this.usuario?.getActitud(),
-            this.usuario?.getRango(), this.usuario?.getRatio()];
-
-
+    filtrarEntrenamientos(rol: Rol, actitud: Actitud, rango: Rango, ratio: number): Entrenamiento[]{
         let entrenamientosFiltrados: Entrenamiento[] = 
             this.entrenamientos.filter(entrenamiento => entrenamiento.getTipoHabilidad() == this.filtroHabilidad);
 
@@ -56,6 +44,10 @@ export class Asignador{
             entrenamientosFiltrados = entrenamientosFiltrados.filter(entrenamiento => entrenamiento.getNivel() == nivel);
         }
 
+        return entrenamientosFiltrados;
+    }
+
+    calcularDistancias(rol: Rol, actitud: Actitud, rango: Rango, entrenamientosFiltrados: Entrenamiento[]){
         let distancias: number[] = [];
         for (let entrenamiento of entrenamientosFiltrados) {
             let distancia = 0;
@@ -64,9 +56,10 @@ export class Asignador{
             distancia += Math.pow(rango - entrenamiento.getRango(), 2);
             distancias.push(distancia);
         }
+        return distancias;
+    }
 
-        console.log(entrenamientosFiltrados)
-
+    entrenamientoMasCercano(distancias: number[]): number{
         let min = distancias[0];
         let index = 0;
         for (let i = 1; i < distancias.length; i++) {
@@ -75,6 +68,30 @@ export class Asignador{
                 index = i;
             }
         }
+        return index;
+    }
+
+
+    asignarEntrenamiento(): Entrenamiento{
+        if(this.entrenamientos.length == 0){
+            throw new Error("No hay entrenamientos");
+        }
+
+        if(this.usuario == null){
+            throw new Error("No hay usuario");
+        }
+
+        const [rol, actitud, rango, ratio] = [this.usuario?.getRol(), this.usuario?.getActitud(),
+        this.usuario?.getRango(), this.usuario?.getRatio()];
+
+
+        let entrenamientosFiltrados: Entrenamiento[] = this.filtrarEntrenamientos(rol, actitud, rango, ratio);
+
+        let distancias: number[] = [];
+        distancias = this.calcularDistancias(rol, actitud, rango, entrenamientosFiltrados);
+
+
+        let index = this.entrenamientoMasCercano(distancias);
 
         return entrenamientosFiltrados[index];
     }
