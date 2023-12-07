@@ -12,6 +12,10 @@ export class Asignador{
         this.entrenamientos = [];
         this.filtroHabilidad = TipoHabilidad.Apoyo;
     }
+
+    getEntrenamientos(): Entrenamiento[] {
+        return this.entrenamientos;
+    }
     
     setUsuario(usuario:Usuario): void {
         this.usuario = usuario;
