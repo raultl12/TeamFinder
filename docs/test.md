@@ -11,8 +11,6 @@ A la hora de escoger las herramientas para testing, debemos tener en cuenta lo s
 ## Herramientas disponibles
 * Deno testing: Esta herramienta ya viene instalada con el runtime del proyecto, por lo que no se deberia instalar ninguna biblioteca externa, además, cuenta con biblioteca de aserciones propia, por lo que no hay que instalarla, solo importarla. 
 
-* Oak: Es especifico para Deno, tampoco requiere de instalación pero es más complejo que deno test pues requiere crear MockContext y MockAps. ([ver documentación](https://deno.land/x/oak@v12.6.1/docs/testing.md?source=))
-
 * Deno jest: Es la versión de jest para Deno, es más fácil de usar que Oak ya que no es necesario crear Mocks, pero requiere de un archivo de configuración algo complejo.
 
 ## Conclusión
