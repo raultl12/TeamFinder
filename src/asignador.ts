@@ -17,10 +17,6 @@ export class Asignador{
         return this._entrenamientos;
     }
 
-    setFiltroHabilidad(filtroHabilidad: TipoHabilidad): void {
-        this._filtroHabilidad = filtroHabilidad;
-    }
-
     filtrarEntrenamientos(rol: Rol, actitud: Actitud, rango: Rango, ratio: number): Entrenamiento[]{
         let entrenamientosFiltrados: Entrenamiento[] = 
             this._entrenamientos.filter(entrenamiento => entrenamiento.getTipoHabilidad() == this._filtroHabilidad);
