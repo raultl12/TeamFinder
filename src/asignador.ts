@@ -16,17 +16,9 @@ export class Asignador{
     getEntrenamientos(): Entrenamiento[] {
         return this.entrenamientos;
     }
-    
-    setUsuario(usuario:Usuario): void {
-        this.usuario = usuario;
-    }
 
     setFiltroHabilidad(filtroHabilidad: TipoHabilidad): void {
         this.filtroHabilidad = filtroHabilidad;
-    }
-
-    aniadirEntrenamiento(entrenamiento:Entrenamiento): void {
-        this.entrenamientos.push(entrenamiento);
     }
 
     filtrarEntrenamientos(rol: Rol, actitud: Actitud, rango: Rango, ratio: number): Entrenamiento[]{
