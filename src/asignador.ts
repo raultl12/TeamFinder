@@ -7,10 +7,10 @@ export class Asignador{
     private entrenamientos: Entrenamiento[];
     private filtroHabilidad: TipoHabilidad;
 
-    constructor(){
-        this.usuario = null;
-        this.entrenamientos = [];
-        this.filtroHabilidad = TipoHabilidad.Apoyo;
+    constructor(usuario: Usuario, entrenamientos: Entrenamiento[], filtroHabilidad: TipoHabilidad){
+        this.usuario = usuario;
+        this.entrenamientos = entrenamientos;
+        this.filtroHabilidad = filtroHabilidad;
     }
 
     getEntrenamientos(): Entrenamiento[] {
