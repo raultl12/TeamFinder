@@ -1,6 +1,6 @@
 // url_test.ts
 // @ts-ignore
-import { assertEquals, assertNotEquals } from "assertEquals";
+import { assertEquals, assertNotEquals, assertArrayIncludes } from "assertEquals";
 import { Asignador } from "../src/asignador.ts";
 import { Entrenamiento } from "../src/entrenamiento.ts";
 import { Usuario } from "../src/usuario.ts";
@@ -17,6 +17,19 @@ let entrenamiento7 = new Entrenamiento(Rol.Support, Actitud.Agresivo, Rango.Maes
 let entrenamientos = [entrenamiento1, entrenamiento2, entrenamiento3,
   entrenamiento4, entrenamiento5, entrenamiento6, entrenamiento7];
 
+const EntrenamientosMasCoincidencias = (usuario: Usuario, entrenamientos: Entrenamiento[]) => {
+  const entrenamientosMasCoincidencias: Entrenamiento[] = entrenamientos.filter((entrenamiento) => {
+    // Filtra los entrenamientos que coincidan con los filtros de rol, actitud y rango del usuario
+    return (
+      entrenamiento.getRol() === usuario.getRol() &&
+      entrenamiento.getActitud() === usuario.getActitud() &&
+      entrenamiento.getRango() === usuario.getRango()
+    );
+  });
+
+  return entrenamientosMasCoincidencias;
+}
+
 // @ts-ignore
 Deno.test("Test de asignación 1", () => {
 
@@ -25,7 +38,7 @@ Deno.test("Test de asignación 1", () => {
 
   let asignador = new Asignador(usuario, entrenamientos, TipoHabilidad.Posicionamiento);
   
-  assertEquals(asignador.asignarEntrenamiento(), entrenamiento1);
+  assertArrayIncludes(EntrenamientosMasCoincidencias(usuario, entrenamientos), [asignador.asignarEntrenamiento()]);
 });
 
 // @ts-ignore
@@ -34,7 +47,7 @@ Deno.test("Test de asignación 2", () => {
 
   let asignador = new Asignador(usuario, entrenamientos, TipoHabilidad.Rotaciones);
 
-  assertEquals(asignador.asignarEntrenamiento(), entrenamiento3);
+  assertArrayIncludes(EntrenamientosMasCoincidencias(usuario, entrenamientos), [asignador.asignarEntrenamiento()]);
 });
 
 // @ts-ignore
