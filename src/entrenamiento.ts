@@ -16,23 +16,23 @@ export class Entrenamiento{
     }
 
     //Getters de los campos
-    public getRol(): Rol{
+    public get rol(){
         return this._rol;
     }
     
-    public getActitud(): Actitud{
+    public get actitud(){
         return this._actitud;
     }
 
-    public getRango(): Rango{
+    public get rango(){
         return this._rango;
     }
 
-    public getTipoHabilidad(): TipoHabilidad{
+    public get tipoHabilidad(){
         return this._tipoHabilidad;
     }
 
-    public getNivel(): Nivel{
+    public get nivel(){
         return this._nivel;
     }
 }

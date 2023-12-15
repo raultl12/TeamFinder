@@ -13,13 +13,13 @@ export class Asignador{
         this._filtroHabilidad = filtroHabilidad;
     }
 
-    getEntrenamientos(): Entrenamiento[] {
+    public get entrenamientos() {
         return this._entrenamientos;
     }
 
     filtrarEntrenamientos(rol: Rol, actitud: Actitud, rango: Rango, ratio: number): Entrenamiento[]{
         let entrenamientosFiltrados: Entrenamiento[] = 
-            this._entrenamientos.filter(entrenamiento => entrenamiento.getTipoHabilidad() == this._filtroHabilidad);
+            this._entrenamientos.filter(entrenamiento => entrenamiento.tipoHabilidad == this._filtroHabilidad);
 
         const nivelMap = [
             { min: 0.0, max: 0.5, nivel: Nivel.Muy_malo },
@@ -33,7 +33,7 @@ export class Asignador{
         const nivel = nivelMap.find(range => ratio >= range.min && ratio < range.max)?.nivel;
         
         if (nivel) {
-            entrenamientosFiltrados = entrenamientosFiltrados.filter(entrenamiento => entrenamiento.getNivel() == nivel);
+            entrenamientosFiltrados = entrenamientosFiltrados.filter(entrenamiento => entrenamiento.nivel == nivel);
         }
 
         return entrenamientosFiltrados;
@@ -43,9 +43,9 @@ export class Asignador{
         let distancias: number[] = [];
         for (let entrenamiento of entrenamientosFiltrados) {
             let distancia = 0;
-            distancia += Math.pow(rol - entrenamiento.getRol(), 2);
-            distancia += Math.pow(actitud - entrenamiento.getActitud(), 2);
-            distancia += Math.pow(rango - entrenamiento.getRango(), 2);
+            distancia += Math.pow(rol - entrenamiento.rol, 2);
+            distancia += Math.pow(actitud - entrenamiento.actitud, 2);
+            distancia += Math.pow(rango - entrenamiento.rango, 2);
             distancias.push(distancia);
         }
         return distancias;
@@ -73,8 +73,8 @@ export class Asignador{
             throw new Error("No hay usuario");
         }
 
-        const [rol, actitud, rango, ratio] = [this._usuario?.getRol(), this._usuario?.getActitud(),
-        this._usuario?.getRango(), this._usuario?.getRatio()];
+        const [rol, actitud, rango, ratio] = [this._usuario?.rol, this._usuario?.actitud,
+        this._usuario?.rango, this._usuario?.ratio];
 
 
         let entrenamientosFiltrados: Entrenamiento[] = this.filtrarEntrenamientos(rol, actitud, rango, ratio);

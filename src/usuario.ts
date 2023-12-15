@@ -13,16 +13,16 @@ export class Usuario {
         this._rango = rango;
     }
 
-    public getRol(): Rol{
+    public get rol(){
         return this._rol;
     }
-    public getActitud(): Actitud{
+    public get actitud(){
         return this._actitud;
     }
-    public getRatio(): number{
+    public get ratio(){
         return this._ratio;
     }
-    public getRango(): Rango{
+    public get rango(){
         return this._rango;
     }
 }

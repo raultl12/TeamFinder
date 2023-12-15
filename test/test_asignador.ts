@@ -21,9 +21,9 @@ const EntrenamientosMasCoincidencias = (usuario: Usuario, entrenamientos: Entren
   const entrenamientosMasCoincidencias: Entrenamiento[] = entrenamientos.filter((entrenamiento) => {
     // Filtra los entrenamientos que coincidan con los filtros de rol, actitud y rango del usuario
     return (
-      entrenamiento.getRol() === usuario.getRol() &&
-      entrenamiento.getActitud() === usuario.getActitud() &&
-      entrenamiento.getRango() === usuario.getRango()
+      entrenamiento.rol === usuario.rol &&
+      entrenamiento.actitud === usuario.actitud &&
+      entrenamiento.rango === usuario.rango
     );
   });
 
@@ -57,7 +57,7 @@ Deno.test("Comparacion: Lógica vs Entrenamiento aleatorio", () => {
   let asignador = new Asignador(usuario, entrenamientos, TipoHabilidad.Apoyo); 
   // Obtener un entrenamiento aleatorio
   const numeroAleatorio = Math.floor(Math.random() * 7);
-  let entrenamientoAleatorio = asignador.getEntrenamientos()[numeroAleatorio];
+  let entrenamientoAleatorio = asignador.entrenamientos[numeroAleatorio];
   let entrenamientoLogica = asignador.asignarEntrenamiento();
 
   assertNotEquals(entrenamientoAleatorio, entrenamientoLogica);
