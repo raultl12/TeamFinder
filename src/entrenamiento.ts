@@ -1,38 +1,38 @@
 import {Rol, Actitud, Rango, TipoHabilidad, Nivel} from './types.ts'
 
 export class Entrenamiento{
-    private rol: Rol;
-    private actitud: Actitud;
-    private rango: Rango;
-    private tipoHabilidad: TipoHabilidad;
-    private nivel: Nivel;
+    private _rol: Rol;
+    private _actitud: Actitud;
+    private _rango: Rango;
+    private _tipoHabilidad: TipoHabilidad;
+    private _nivel: Nivel;
 
     constructor(rol: Rol, actitud: Actitud, rango: Rango, tipoHabilidad: TipoHabilidad, nivel: Nivel){
-        this.rol = rol;
-        this.actitud = actitud;
-        this.rango = rango;
-        this.tipoHabilidad = tipoHabilidad;
-        this.nivel = nivel;
+        this._rol = rol;
+        this._actitud = actitud;
+        this._rango = rango;
+        this._tipoHabilidad = tipoHabilidad;
+        this._nivel = nivel;
     }
 
     //Getters de los campos
     public getRol(): Rol{
-        return this.rol;
+        return this._rol;
     }
     
     public getActitud(): Actitud{
-        return this.actitud;
+        return this._actitud;
     }
 
     public getRango(): Rango{
-        return this.rango;
+        return this._rango;
     }
 
     public getTipoHabilidad(): TipoHabilidad{
-        return this.tipoHabilidad;
+        return this._tipoHabilidad;
     }
 
     public getNivel(): Nivel{
-        return this.nivel;
+        return this._nivel;
     }
 }

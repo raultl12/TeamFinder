@@ -1,28 +1,28 @@
 import {Rol, Actitud, Rango} from './types.ts'
 
 export class Usuario {
-    private rol: Rol;
-    private actitud: Actitud;
-    private ratio: number;
-    private rango: Rango;
+    private _rol: Rol;
+    private _actitud: Actitud;
+    private _ratio: number;
+    private _rango: Rango;
 
     constructor(rol: Rol, actitud: Actitud, ratio: number, rango: Rango){
-        this.rol = rol;
-        this.actitud = actitud;
-        this.ratio = ratio;
-        this.rango = rango;
+        this._rol = rol;
+        this._actitud = actitud;
+        this._ratio = ratio;
+        this._rango = rango;
     }
 
     public getRol(): Rol{
-        return this.rol;
+        return this._rol;
     }
     public getActitud(): Actitud{
-        return this.actitud;
+        return this._actitud;
     }
     public getRatio(): number{
-        return this.ratio;
+        return this._ratio;
     }
     public getRango(): Rango{
-        return this.rango;
+        return this._rango;
     }
 }
