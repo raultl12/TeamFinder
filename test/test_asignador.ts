@@ -51,14 +51,13 @@ Deno.test("Test de asignación 2", () => {
 });
 
 // @ts-ignore
-Deno.test("Comparacion: Lógica vs Entrenamiento aleatorio", () => {
+Deno.test("Comparacion: Entrenamiento aleatorio", () => {
   let usuario = new Usuario(Rol.Support, Actitud.Controlador, 1.3, Rango.Maestro);
 
   let asignador = new Asignador(usuario, entrenamientos, TipoHabilidad.Apoyo); 
   // Obtener un entrenamiento aleatorio
   const numeroAleatorio = Math.floor(Math.random() * 7);
   let entrenamientoAleatorio = asignador.entrenamientos[numeroAleatorio];
-  let entrenamientoLogica = asignador.asignarEntrenamiento();
 
-  assertNotEquals(entrenamientoAleatorio, entrenamientoLogica);
+  assertNotEquals(EntrenamientosMasCoincidencias(usuario, entrenamientos)[0], entrenamientoAleatorio);
 });
