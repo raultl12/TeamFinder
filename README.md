@@ -14,6 +14,8 @@ Los jugadores de counter-strike no encuentran ejercicios personalizados para mej
 
 [Test](./docs/test.md)
 
+[Imagen para pruebas](./docs/eleccion_imagen.md)
+
 ## Herramientas para la automatización de operaciones
 Las herramientas seleccionadas para este proyecto se indican en [este archivo](./docs/herramientas_seleccionadas.md). 
 
@@ -40,3 +42,17 @@ Para ejecutar los test:
 ```bash
 vr run test
 ```
+
+## Contenedor para pruebas
+Para construir la imagen usar el comando:
+
+```bash
+docker build -t raultl12/teamfinder .
+```
+
+Para ejecutar el contenedor:
+
+```bash
+docker run -tv `pwd`:/app/test raultl12/teamfinder
+```
+La imagen también puede ser encontrada en [Docker Hub](https://hub.docker.com/r/raultl12/teamfinder)
