@@ -1,6 +1,6 @@
 FROM baleyko/deno:latest
 
-WORKDIR /app
+WORKDIR /app/test
 
 LABEL maintainer="raultlopez@correo.ugr.es"
 
