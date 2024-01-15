@@ -9,7 +9,7 @@ Para seleccionar una imagen debemos tener en cuenta lo siguiente:
 
 * [denoland/deno](https://hub.docker.com/r/denoland/deno). Es la imagen oficial de deno para docker. 
 * [Baleyko/deno](https://hub.docker.com/r/baleyko/deno). Es una imagen no oficial que contiene ubuntu focal con deno ya instalado. 
-* [Ubuntu](https://hub.docker.com/_/ubuntu). Imagen oficial de Ubuntu. No trae nada instalado por lo que hay que instalar Deno y TypeScript.
+* [Ubuntu](https://hub.docker.com/_/ubuntu). Imagen oficial de Ubuntu. No trae nada instalado por lo que hay que instalar Deno.
 * [Alpine](https://hub.docker.com/_/alpine). Imagen oficial de Alpine, es muy ligera y rápida, pero hay que instalar Deno y TypeScript. 
 * [Hayd](https://hub.docker.com/r/hayd/deno). Era una imagen extraoficial pero que ahora se ha unido a las oficiales de Deno. 
 * [runcitadel](https://hub.docker.com/r/runcitadel/deno). Solo especifica que está basada en debian. Tiene deno instalado. 
